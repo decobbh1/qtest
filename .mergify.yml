@@ -1,10 +1,10 @@
 queue_rules:
   - name: default
     merge_conditions: []
+    branch_protection_injection_mode: none
 pull_request_rules:
-  - name: automerge on label
-    conditions:
-      - label=automerge
+  - name: automerge
+    conditions: [label=automerge]
     actions:
       queue:
         name: default
