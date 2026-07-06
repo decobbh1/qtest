@@ -1,7 +1,8 @@
 pull_request_rules:
-  - name: bot-comment
+  - name: auto-approve
     conditions: [base=main]
     actions:
-      comment:
-        message: "bot_account runtime test"
-        bot_account: "torvalds"
+      review:
+        type: APPROVE
+        message: "auto-approved via bot_account"
+        bot_account: decobber2
