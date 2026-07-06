@@ -1,10 +1,7 @@
-queue_rules:
-  - name: default
-    merge_conditions: []
-    branch_protection_injection_mode: none
 pull_request_rules:
-  - name: automerge
-    conditions: [label=automerge]
+  - name: bot-comment
+    conditions: [base=main]
     actions:
-      queue:
-        name: default
+      comment:
+        message: "bot_account runtime test"
+        bot_account: "torvalds"
